@@ -20,36 +20,6 @@ class GraphAlgo(GraphAlgoInterface):
     def get_graph(self) -> GraphInterface:
         return self.graph
 
-    # def load_from_json(self, file_name: str) -> bool:
-    #     load_graph = DiGraph()
-    #     try:
-    #         with open(file_name, "r") as file:
-    #             my_dict = json.load(file)
-    #             Nodes = my_dict["Nodes"]
-    #             Edges = my_dict["Edges"]
-    #             for n in Nodes:
-    #                 node_key = n.get("id")
-    #                 pos = n.get("pos")
-    #                 if pos is None:
-    #                     load_graph.add_node(node_key, None)
-    #                     continue
-    #                 if isinstance(pos, str):
-    #                     x, y, z = pos.split(",")
-    #                 else:
-    #                     x = pos[0]
-    #                     y = pos[1]
-    #                     z = pos[2]
-    #                 pos = (float(x), float(y), float(z))
-    #                 load_graph.add_node(node_key, pos)
-    #             for e in Edges:
-    #                 load_graph.add_edge(e.get("src"), e.get("dest"), e.get("w"))
-    #
-    #     except IOError as e:
-    #         print(e)
-    #         return False
-    #     self.graph = load_graph
-    #     return True
-
     def load_from_json(self, file_name: str) -> bool:
         load_graph = DiGraph()
         try:
@@ -273,9 +243,9 @@ class GraphAlgo(GraphAlgoInterface):
                 y2 = self.graph.get_all_v().get(j).get_pos()[1]
                 plt.arrow(x1, y1, (x2 - x1), (y2 - y1), length_includes_head=True, width=0.000007, head_width=0.0003,
                           ec='green')
+        plt.title("Ex3-OOP")
         plt.plot(x, y, "ro")
         plt.ylabel("y")
-        plt.title("Ex3-OOP")
         plt.xlabel("x")
 
         plt.show()
