@@ -9,7 +9,7 @@ at this project we implement the data structure of directional weighted graph wi
 we implement a 4 main classes: Node, edge_data , WGraph_DS , WGraph_Algo and These classes contains serval methods.
 
 
-###Class Node:
+##Class Node:
 
 #This Class represents the set of operations applicable on a single node(vertex) in a directional weighted graph. Every node gets it key, tag, pos and info.
 #this class contains several functions:
