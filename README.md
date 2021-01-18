@@ -1,4 +1,4 @@
-## Ex3-OOP
+### Ex3-OOP
 
 This is an object oriented programmin project which his main idea is based on functions.
 
@@ -9,10 +9,10 @@ at this project we implement the data structure of directional weighted graph wi
 we implement a 4 main classes: Node, edge_data , WGraph_DS , WGraph_Algo and These classes contains serval methods.
 
 
-Class Node:
+##Class Node:
 
-This Class represents the set of operations applicable on a single node(vertex) in a directional weighted graph. Every node gets it key, tag, pos and info.
-this class contains several functions:
+#This Class represents the set of operations applicable on a single node(vertex) in a directional weighted graph. Every node gets it key, tag, pos and info.
+#this class contains several functions:
 
 def get_key(self):
 Returns the node key.
@@ -43,9 +43,10 @@ set a new distance for the node.
 
 
 
-Class edge_data :
-This Class represents the set of operations applicable on a  edge(src,dest) in a directional weighted graph.
-this class contains several functions:
+##Class edge_data :
+
+#This Class represents the set of operations applicable on a  edge(src,dest) in a directional weighted graph.
+#this class contains several functions:
 
 def get_src(self):
 return the surce of the edge.
@@ -68,11 +69,12 @@ set a new tag on the edge by given new int tag.
 
 
 
-Class DiGraph(GraphInterface):
+##Class DiGraph(GraphInterface):
 
-This class represents the set of opretions applicable on graph in a directional weighted graph. 
-we implement this Graph with a two data structure one called dictionary vertices and the second called list edges one contains the Nodes and the other one contains the nodes and all the  edges of the same node.
-this class contains several functions:
+#This class represents the set of opretions applicable on graph in a directional weighted graph. 
+#we implement this Graph with a two data structure one called dictionary vertices and the second called list edges one contains the Nodes and the other one contains the nodes #and all the  edges of the same node.
+
+#this class contains several functions:
 
 def get_node(self, node_id: int):
 return node by given key.
@@ -110,14 +112,15 @@ return the number of the edges in the graph.
 def get_mc(self) :
  returns the number of changes we made to the graph
 
-Class GraphAlgo(GraphAlgoInterface):
-This Class represents the "regular" Graph Theory algorithms.
-in this class we used  several functions like : 
-1.bfs(self, start: int, v: []) - Go through all the neighbors of the vertex and create a list of all the neighbors that come out of the vertex
-2. transpose(self, id1, visited) - Go through all the neighbors of the vertex and create a list of all the neighbors that come In  the vertex
+##Class GraphAlgo(GraphAlgoInterface):
+
+#This Class represents the "regular" Graph Theory algorithms.
+#in this class we used  several functions like : 
+#1.bfs(self, start: int, v: []) - Go through all the neighbors of the vertex and create a list of all the neighbors that come out of the vertex
+#2. transpose(self, id1, visited) - Go through all the neighbors of the vertex and create a list of all the neighbors that come In  the vertex
 
 
-this class contains several functions:
+#this class contains several functions:
 
 def __init__(self, graph: DiGraph = None):
 init the graph .
