@@ -206,23 +206,6 @@ class DiGraph(GraphInterface):
         """
         return self.vertices.get(node_id)
 
-    # def _repr_(self) -> str:
-    #
-    #     graph_info = f"Graph: |V|={self.v_size()} , |E|={self.e_size()}\n"
-    #     graph_info += "{"
-    #     i = 0
-    #     for j in self.vertices.keys():
-    #         i += 1
-    #         graph_info += f"{j}: {j}: |edges out| "
-    #         graph_info += f"{len(self.all_out_edges_of_node(j).keys())} "
-    #         graph_info += "|edges in| "
-    #         graph_info += f"{len(self.all_in_edges_of_node(j).keys())}"
-    #
-    #         if len(self.vertices.keys()) == i:
-    #             graph_info += "}"
-    #         else:
-    #             graph_info += ", "
-    #     return graph_info
 
     def _repr_(self) -> str:
 
@@ -241,23 +224,4 @@ class DiGraph(GraphInterface):
             else:
                 graph_info += ", "
         return graph_info
-
-
-if __name__ == '__main__':
-    graph = DiGraph()
-    a = Node(1)
-    b = Node(2)
-    c = Node(3)
-    d = Node(4)
-    graph.add_node(a.key)
-    graph.add_node(b.key)
-    graph.add_node(c.key)
-    graph.add_node(d.key)
-    graph.add_edge(a.key, d.key, 2.2)
-    graph.add_edge(a.key, b.key, 2.3)
-    graph.add_edge(a.key, c.key, 5.2)
-    print("edgegraph", graph.edges)
-    graph.add_edge(a.key, d.key, 3.2)
-    graph.add_edge(b.key, c.key, 8.2)
-    print("graph is :", graph)
 
